@@ -1,0 +1,124 @@
+.content{
+    padding-top: 10px;
+    padding-bottom:5px;
+  }
+  
+  input[type=text] {
+    height: 40px;
+    width: 130px;
+    background-color: white;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border: none;
+    border-bottom: 2px solid black;
+    
+  }
+  
+  .card {
+    background-color: white;
+    color: white;
+    padding: 10px;
+    height: 150px;
+  }
+  
+  
+  .cards {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+  }
+  
+  @media (min-width: 700px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  @media (min-width: 500px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+  }
+  
+  /* When the input field gets focus, change its width to 100% */
+  input[type=text]:focus {
+    width: 100%;
+  }
+  
+  .recommend{
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .type{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    left: 0;
+  }
+  #mediaName {
+    font-weight: bold;
+  }
+  
+  .mediaTile{
+    width: 50%;
+    padding: 10px;
+    object-fit: cover;
+  }
+  
+  .mediaTile1{
+    width: 33%;
+    padding: 10px;
+    object-fit: cover;
+  }
+  
+  table{
+     margin-left: auto;
+     margin-right: auto;
+     padding: 10px;
+  }
+  
+  .image_container {
+      position: relative;
+      transition: transform 0.2s;
+  }
+  
+  .image_container:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+  }
+  
+  .image_container1 {
+      position: relative;
+      transition: transform 0.2s;
+  }
+  
+  .image_container1:hover {
+      cursor: pointer;
+      transform: scale(1.0155);
+  }
+  
+  .overlay {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      transition: 0.5s ease;
+      opacity: 0;
+      bottom: 0;
+      font-size: 20px;
+      padding: 20px;
+      text-align: center;
+    color: white;
+  }
+  
+  .image_container:hover .overlay {
+      opacity: 1;
+  }
+  
+  
+  .image_container1:hover .overlay {
+      opacity: 1;
+  }
+  

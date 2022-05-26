@@ -1,0 +1,162 @@
+a {
+    color: black;
+    font-weight: bold;
+  }
+  a:hover {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .content{
+    overflow: scroll;
+    padding-bottom:30px;
+  }
+  
+  .platforms > h3{
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .platforms img{
+    width: 30px;
+    padding: 0px;
+    margin: 0px 4px;
+  }
+  
+  .reviews {
+    padding: 0px;
+    margin: 0px;
+    left:0;
+  }
+  
+  .media > h1{
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  
+  
+  .type {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    left: 0;
+  }
+  
+  .platformRatings {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+    font-size: 16px;
+    gap: 110px;
+    
+    padding: 0px;
+    margin: 0px;
+    left: 0;
+  }
+  
+  .platforms {
+    width: 100%;
+  }
+  
+  
+  #mediaName {
+    font-weight: bolder;
+  }
+  #mediaType {
+    color: gray;
+  }
+  
+  table{
+     margin-left: auto;
+     margin-right: auto;
+     padding: 10px;
+  }
+  
+  .ratings > h3{
+    padding: 0px 0px;
+    margin: 0px;
+  }
+  
+  .ratings img{
+    width: 35%;
+    padding: 0px 0px;
+    margin: 0px;
+  }
+  
+  .mediaImage{
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .button {
+    background-color: white;
+    color: black;
+    border: 2px solid black; /* Green */
+    border-radius: 10px;
+    padding: 5px 32px;
+    margin: 15px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+  .button:hover {
+    background-color: black; /* Green */
+    color: white;
+    cursor: pointer;
+  }
+  
+  .reviewUser{
+    color: blue;
+  }
+  
+  .friendIcons {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    padding: 0px;
+    margin-top: -20px;
+    left: 0;
+  }
+  
+  .friendIcons img{
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  
+  .col{
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .review_watchlist{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0px;
+    margin: 0px;
+    left: 0;
+  }

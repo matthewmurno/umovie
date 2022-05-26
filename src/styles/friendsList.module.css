@@ -1,0 +1,48 @@
+.userPhoto {
+    width: 20%;
+    object-fit: cover;
+    border-radius: 50px;
+    position: absolute;
+    right: 8%;
+    top: 3.0%;
+    max-width: 100px;
+  }
+  
+  .userInformation{
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 20px;
+  }
+  
+  .friendPhoto {
+    width: 20%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    right: 8%;
+    top: 28.5%;
+    max-width: 100px;
+  }
+  
+  .friendsCard{
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 20px;
+  }
+  
+  .friendPhoto2 {
+    height: 100px;
+    width: 20%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    right: 8%;
+    top: 48.5%;
+    max-width: 100px;
+  }
+  
+  .friendsCard2 {
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 20px;
+  }

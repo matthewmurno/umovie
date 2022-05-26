@@ -1,0 +1,152 @@
+.content {
+  padding-top: 40px;
+}
+
+.titleCard {
+  border-radius: 25px;
+  border: 2px solid black;
+  width: 100%;
+  height: 150px;
+}
+
+.profileHeading{
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  box-sizing: content-box;
+  width: fit-content;
+  gap: 15px;
+}
+
+.profileHeading > li {
+  width: fit-content;
+}
+
+.profileHeading:first-child{
+  margin-left: -20px;
+  max-width: 100%;
+}
+
+
+.buttonList {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    gap: -5px;
+  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    margin: 0px;
+    width: 100%;
+    height: 44px;
+    padding: 0px 40px;
+  }
+  
+  .buttonList .button {
+    background-color: white;
+    color: black;
+    border: 2px solid black; /* Green */
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: none;
+    height: 30px;
+  }
+  
+  
+  .button:hover {
+    background-color: black; /* Green */
+    color: white;
+    cursor: pointer;
+  }
+  
+  .profileHeading .userName {
+    margin-top: -15px;
+    padding: 10px;
+  }
+  
+  .profileHeading #profileImg {
+    object-fit: cover;
+    border-radius: 50px;
+    max-width: 60px;
+  }
+  
+  .Platforms {
+    padding: -10px;
+    margin: -35px -35px;
+    left: 0;
+  }
+  
+  .platformImg {
+    width: 30px;
+    height: auto;
+  }
+  
+  .topImages img {
+    object-fit: cover;
+    width: 50%;
+    border-radius: 50px;
+    padding: 5px;
+  }
+
+  .list{
+    margin-left: 67px;
+    margin-top: -55px;
+  }
+  
+  .list > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    object-fit: cover;
+    width: 60%;
+  }
+  
+  ul > li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    left: 0;
+  }
+  
+  .mediaTile{
+    width: 33%;
+    padding: 10px;
+    object-fit: cover;
+  }
+  
+  table{
+     margin-left: auto;
+     margin-right: auto;
+     padding: 10px;
+  }
+  
+  .image_container {
+    position: relative;
+    transition: transform 0.2s;
+  }
+  
+  .image_container:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  .image_container1 {
+    position: relative;
+    transition: transform 0.2s;
+  }
+  
+  .image_container1:hover {
+    cursor: pointer;
+    transform: scale(1.0155);
+  }
+
+  .friendNumber{
+    margin-left: 105px;
+  }
+  
+  

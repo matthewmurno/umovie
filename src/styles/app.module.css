@@ -1,0 +1,37 @@
+/* a minimalist set of CSS resets */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: 'Comfortaa', cursive;
+  line-height: 1.5;
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+button{
+  padding: 0;
+  border:0;
+  background: none;
+  font-size: 100%;
+  font-family: inherit;
+}
+button:focus{
+  outline: none;
+}
