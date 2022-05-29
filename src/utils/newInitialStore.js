@@ -61,6 +61,17 @@ export default {
             datetime: "2022-04-24T22:50:42Z",
         },
     ],
+    playlist: [{
+        userId: "Matt",
+        mediaId: "music1",
+        name: "First Class",
+        type: "song",
+        location_image: [
+            "/assets/spotify.svg",
+            "/assets/music.svg",
+        ],
+        datetime: "2022-04-22T22:45:42Z",
+    },],
     reviews: [{
             mediaId: "tv-show1",
             user: "Brian",
@@ -159,7 +170,7 @@ export default {
             name: "Better Call Saul",
             type: "Show",
             creator: "Vince Gilligan",
-            img: "/assets/better call saul.jpeg",
+            img: "/assets/Better-call-saul.jpeg",
             location: "Netflix",
             location_image: [
                 "/assets/Netflix.svg",
@@ -170,7 +181,7 @@ export default {
             name: "Breaking Bad",
             type: "Show",
             creator: "Vince Gilligan",
-            img: "/assets/breaking bad.jpeg",
+            img: "/assets/Breaking-bad.jpeg",
             location: "Netflix",
             location_image: [
                 "/assets/Netflix.svg",

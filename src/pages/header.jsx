@@ -15,9 +15,7 @@ function Header(props) {
     return (
         <header className={css.header}>
             <div className={css.headerItem}>
-                <button>
                     <h2>WatchedIt?</h2>
-                </button>
             </div>
             <div className={css.headerItem}>
                 <Link to={"watchlist/" + currentUserId}>
@@ -25,8 +23,9 @@ function Header(props) {
                 </Link>
             </div>
             <div className={css.headerItem}>
-
+                <Link to={"playlist/" + currentUserId}>
                     <FontAwesomeIcon icon="fa-solid fa-music" size="lg" />
+                </Link>
             </div>
             <div className={css.headerItem}>
 

@@ -5,7 +5,6 @@ import { Link, useParams } from "react-router-dom";
 //icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGear } from "@fortawesome/free-solid-svg-icons";
 
 //pages
 import MediaThumbnail from "./mediaThumbnail.jsx";
@@ -31,6 +30,8 @@ export default function Profile(props) {
   //useParams
   const { mediaId, userId } = useParams();
   
+  //setting count for yourTop to render the different objects
+  const [count, setCount] = useState(0);
 
 
   console.log("media", media);
@@ -65,6 +66,35 @@ export default function Profile(props) {
 
   const topSong = media.find((a) => a.mediaId === music);
   const topTvShow = media.find((a) => a.mediaId === tvshow);
+
+  var title;
+  if (count === 0) {
+    title = "Song";
+  }
+  else if (count === 1){
+    title = "Tv Show"
+  }
+  else if (count === 2){
+    title = "Movie"
+  }
+  else if (count === 3){
+    title = "Podcast"
+  }
+  
+  var info;
+  if (count === 0) {
+    info = topSong;
+  }
+  else if (count === 1){
+    info = topTvShow
+  }
+  else if (count === 2){
+    
+  }
+  else if (count === 3){
+    
+  }
+
   
 
   console.log("USERS",currentUser.top[0].tvshow[1]);
@@ -97,7 +127,7 @@ export default function Profile(props) {
               {imgloop(services)}
             </div>
             <div className={css.friendNumber}>
-              <span></span> <br/> friends
+              <span>friends</span>
             </div>
           </div>
         
@@ -117,37 +147,58 @@ export default function Profile(props) {
             </Link>
           </div>*/}
         <div className={css.yourTop}>
-          <h2> {userId}'s Top: </h2>
-          <table className={css.friendsLikes}>
-            <tr>
-              <td className={css.mediaTile}>
-                <Link
+          <h3> {userId}'s Top {title}: </h3>
+          <ul className={css.type}>
+              <li id={css.mediaName}>{info.name}</li>
+              <li> {info.type}</li>
+            </ul>
+          {(count === 0) ? 
+            <Link
                   key={topSong.mediaId}
                   to={"/" + topSong.mediaId}
                 >
-                  <div className={css.image_container}>
-                    <MediaThumbnail
-                      className={css.tiles}
-                      filtered={topSong}
-                    />
-                  </div>
-                </Link>
-              </td>
-              <td className={css.mediaTile}>
-                <Link
+          <div className={css.image_container}>
+            <MediaThumbnail
+              className={css.tiles}
+              filtered={topSong}
+            />
+            
+          </div>
+          </Link> : null}
+          {(count === 1) ? 
+            <Link
                   key={topTvShow.mediaId}
                   to={"/" + topTvShow.mediaId}
                 >
-                  <div className={css.image_container}>
-                    <MediaThumbnail
-                      className={css.tiles}
-                      filtered={topTvShow}
-                    />
-                  </div>
-                </Link>
-              </td>
-            </tr>
-          </table>
+          <div className={css.image_container}>
+            <MediaThumbnail
+              className={css.tiles}
+              filtered={topTvShow}
+            />
+          </div>
+          </Link> : null}
+          {(count === 2) ? 
+          <div className={css.image_container}>
+            <MediaThumbnail
+              className={css.tiles}
+              filtered={topSong}
+            />
+          </div> : null}
+          {(count === 3) ? 
+          <div className={css.image_container}>
+            <MediaThumbnail
+              className={css.tiles}
+              filtered={topSong}
+            />
+          </div> : null}
+          <div className={css.buttonBar}>
+          {(count !== 0) ? 
+            <h2 className = {css.leftButton} onClick={() => setCount(count-1)}> {"<"} </h2>
+          : <h2 style={{marginRight: "13.5px"}}></h2>}
+          {(count !== 3) ?
+            <h2 className = {css.rightButton} onClick={() => setCount(count+1)}> {">"} </h2>
+          : null}
+          </div>
         </div>
         <div className={css.highestRated}>
           <h2>{userId}'s Highest Rated:</h2>

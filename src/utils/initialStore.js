@@ -107,6 +107,18 @@ export default {
         datetime: "2022-04-24T22:50:42Z",
       },
     ],
+    playlist: [
+      {
+        userId: "Matt",
+        mediaId: "music3",
+        name: "Better Call Saul",
+        type: "Show",
+        location_image: [
+          "https://cdn.glitch.global/22f5dd42-08f1-415b-8c2b-977239945c6b/netflix.svg?v=1650431137374",
+        ],
+        datetime: "2022-04-22T22:45:42Z",
+      },
+    ],
     media: [
       {
         tvshows: [

@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import publicUrl from '../utils/publicUrl.js';
 
-export default function watchlistItems(props) {
+export default function playlistItems(props) {
   const { item } = props;
   console.log(item);
+  
 
   const platform = item.location_image.map((a) => <img src={publicUrl(a)} />);
   const date = new Date(item.datetime);

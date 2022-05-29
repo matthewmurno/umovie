@@ -27,6 +27,33 @@
   max-width: 100%;
 }
 
+.buttonBar {
+  display: flex;
+  gap:325px;
+}
+
+.leftButton {
+  align-self: flex-start
+}
+
+.rightButton {
+  align-self: flex-end
+}
+
+.type{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  left: 0;
+}
+#mediaName {
+  font-weight: bold;
+}
 
 .buttonList {
     justify-content: flex-start;

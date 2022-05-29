@@ -16,6 +16,9 @@ function Media(props) {
     removeWatchlistItem,
     watchlist, 
     reviews,
+    addPlaylistItem,
+    removePlaylistItem,
+    playlist, 
   } = props;
   const [review, setReview] = useState("");
   const [leaveReview, setLeaveReview] = useState(false);
@@ -100,20 +103,53 @@ function Media(props) {
     }
   }
 
+  function getPlaylistItems(user) {
+    return playlist.filter((list) => list.userId === user);
+  }
+
+  function filteredPlaylistItems(mediaId) {
+    if (playlistItems.find((list) => list.mediaId === mediaId) === undefined) {
+      return false;
+    } else {
+      return playlistItems.find((list) => list.mediaId === mediaId);
+    }
+  }
+
   const user = getUser(users);
   const watchlistItems = getWatchlistItems(user.id);
   const filterWatchlistItems = filteredWatchlistItems(mediaId);
+  const playlistItems = getPlaylistItems(user.id);
+  const filterPlaylistItems = filteredPlaylistItems(mediaId);
 
   function handleAddToWatchlist() {
     return addWatchlistItem(
       title,
       filtered.type,
-      [filtered.location_image.map((a) => a)],
+      filtered.location_image,
       filtered.mediaId
     );
   }
   function handleRemoveFromWatchlist() {
     return removeWatchlistItem(user.id, filtered.mediaId);
+  }
+  console.log(user.id, filtered.mediaId);
+  console.log(watchlist.filter((list) => list.userId === user.id));
+  console.log(watchlistItems.filter((list) => list.mediaId === mediaId));
+  console.log(filterWatchlistItems);
+  console.log(
+    filterWatchlistItems.mediaId === mediaId &&
+      filterWatchlistItems.userId === user.id
+  );
+  function handleAddToPlaylist() {
+    return addPlaylistItem(
+      title,
+      filtered.type,
+      filtered.location_image,
+      filtered.mediaId
+    );
+  }
+  function handleRemoveFromPlaylist() {
+    return removePlaylistItem(user.id, filtered.mediaId);
   }
   console.log(user.id, filtered.mediaId);
   console.log(watchlist.filter((list) => list.userId === user.id));
@@ -177,7 +213,21 @@ console.log("COMMENT", review);
             </button>
           </li>
           <li>
-            {filterWatchlistItems.mediaId === mediaId &&
+            {(filtered.mediaType === "Podcast") | (filtered.mediaType === "Music") 
+            ? filterPlaylistItems.mediaId === mediaId &&
+            filterPlaylistItems.userId === user.id ? (
+              <button
+                className={css.button}
+                onClick={handleRemoveFromPlaylist}
+              >
+                Remove from Playlist
+              </button>
+            ) : (
+              <button className={css.button} onClick={handleAddToPlaylist}>
+                Add to Playlist
+              </button>
+            )
+            : filterWatchlistItems.mediaId === mediaId &&
             filterWatchlistItems.userId === user.id ? (
               <button
                 className={css.button}
