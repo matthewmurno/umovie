@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/umovie/static/css/main.154ff493.css",
-    "main.js": "/umovie/static/js/main.364aecd4.js",
+    "main.css": "/umovie/static/css/main.d9a7ac5d.css",
+    "main.js": "/umovie/static/js/main.33e3edf7.js",
     "static/js/787.e9b0c91b.chunk.js": "/umovie/static/js/787.e9b0c91b.chunk.js",
     "index.html": "/umovie/index.html",
-    "main.154ff493.css.map": "/umovie/static/css/main.154ff493.css.map",
-    "main.364aecd4.js.map": "/umovie/static/js/main.364aecd4.js.map",
+    "main.d9a7ac5d.css.map": "/umovie/static/css/main.d9a7ac5d.css.map",
+    "main.33e3edf7.js.map": "/umovie/static/js/main.33e3edf7.js.map",
     "787.e9b0c91b.chunk.js.map": "/umovie/static/js/787.e9b0c91b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.154ff493.css",
-    "static/js/main.364aecd4.js"
+    "static/css/main.d9a7ac5d.css",
+    "static/js/main.33e3edf7.js"
   ]
 }
