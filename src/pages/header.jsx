@@ -12,10 +12,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Header(props) {
     const { currentUserId } = props;
 
+    //I'm going to split this into a few parts
+
     return (
         <header className={css.header}>
-            <div className={css.headerItem}>
+
+            <div className={css.headerItem} >
+                <Link to="/">
                     <h2>WatchedIt?</h2>
+                </Link>
             </div>
             <div className={css.headerItem}>
                 <Link to={"watchlist/" + currentUserId}>

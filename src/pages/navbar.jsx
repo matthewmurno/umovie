@@ -16,17 +16,17 @@ export default function Navbar(props) {
     <nav className={css.navbar}>
       <div className={css.navitem}>
         <Link to="/">
-          <FontAwesomeIcon icon="fa-solid fa-house" size="lg" />
+          <FontAwesomeIcon icon="fa-solid fa-house" size="lg" color="#FFFFFF"/>
         </Link>
       </div>
       <div className={css.navitem}>
         <Link to="search">
-          <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" size="lg" />
+          <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" size="lg" color="#FFFFFF"/>
         </Link>
       </div>
       <div className={css.navitem}>
         <Link to={"profile/" + currentUserId}>
-          <FontAwesomeIcon icon="fa-solid fa-user" size="lg" />
+          <FontAwesomeIcon icon="fa-solid fa-user" size="lg" color="#FFFFFF"/>
         </Link>
       </div>
     </nav>
